@@ -1,0 +1,11 @@
+<h2 class="content-subhead, centered">List of Users</h2>
+
+<div class="pure-menu, centered">
+  <ul class="pure-menu-list">
+    <% @users.each_pair do |name, _| %>
+      <li class="pure-menu-item, centered">
+        <a href="/user/<%= name %>" class="pure-menu-link"><%= name.capitalize %></a>
+      </li>
+    <% end %>
+  </ul>
+</div>

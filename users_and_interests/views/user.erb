@@ -1,0 +1,14 @@
+<h2 class="centered"><%= @name.capitalize %></h2>
+<div class="pure-menu, centered">
+  <ul class="pure-menu-list">
+    <li class="pure-menu-item">
+      Email address: <%= @email %>
+    </li>
+      <li class="pure-menu-item">
+        Interests: <%= @interests.map { |interest| interest.capitalize }.join(", ") %>
+      </li>
+  </ul>
+  <% @other_users.each_pair do |name, _| %>
+    <a class="pure-menu-link" href="/user/<%= name %>">Go To: <%= name.capitalize %></a>
+  <% end %>
+</div>
