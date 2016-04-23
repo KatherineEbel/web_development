@@ -1,0 +1,31 @@
+1. What are the required components of an HTTP request?
+  - HTTP method and path are required. Parameters, headers, and body are optional.
+    - The method (usually GET or POST)
+    - the path of the server
+    - optionally parameters for the request ?due=today
+2. What are the required components of an HTTP response? What are the additional components?
+  - Status code required. Content and body optional
+    - Status code (200 if OK) others include 303, 400 or 500 variations
+    - Content type (so browser knows how to process response)
+    - Body or payload containing the data that server sent.
+3. What determines whether a request should use GET or POST as its HTTP method?
+  - Use get when you need to retrieve data from server
+  - Use post when you want to send data (change data that is stored)to server
+    - Search forms actually use GET since they are not changing any of the info on the server.
+4. Is the host component of a URL included as part of an HTTP request?
+  - no. No it is only used to establish the connection.
+  - Only the URL's path and parameters are included in the actual request.
+
+HTTP is a text-based protocol that is the foundation of the web.
+There are two parties involved in HTTP: the client and the server.
+A complete HTTP interaction involves a request which is sent from the client to the server, and a response which is sent from the server to the client.
+A request is sent to a host and must include a method and a path. It may also include parameters, headers, or a body.
+GET is the HTTP method used to retrieve a resource from the server.
+A response must include a status. It may also include headers or a body.
+A 200 OK status in a response means the request was successful.
+Modern web browsers include debugging tools that allow you to inspect the HTTP activity of a page.
+
+http:// localhost :3003 / ?rolls=2&sides=6
+protocol  host    port  path  parameters(query)
+
+another style is http:// localhost :3003 /rolls/2/sides/6
